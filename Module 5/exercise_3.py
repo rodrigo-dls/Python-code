@@ -5,14 +5,18 @@
 
 user_input = int(input("Enter a number: "))
 
-for i in range(2,user_input):
-    test = user_input % i
-    print(test)
-    if user_input == 1 or user_input == 2:
-        print("It is a prime number.")
-    elif test == 0:
-        print("It is a prime number.")
-        break
+if user_input == 0:
+    print(f"{user_input} is not a prime number.")
+elif user_input == 1:
+    print(f"{user_input} is not a prime number.")
 else:
-    print("It is not a prime number.")
+    for i in range(2,user_input):
+        test = user_input % i
+
+        if test == 0:
+            print(f"{user_input} is not a prime number.")
+            break
+    else:
+        print(f"{user_input} is a prime number.")
+
 
